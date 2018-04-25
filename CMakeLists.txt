@@ -69,7 +69,7 @@ else()
 endif()
 
 if( WITH_PYTHON3 )
-   find_package(PythonLibs 3 EXACT REQUIRED) 
+   find_package(PythonLibs 3 EXACT REQUIRED)
 else()   
     find_package(PythonLibs 2.7 EXACT REQUIRED) 
 endif()
@@ -97,6 +97,9 @@ include_directories(${CAFFE_INCLUDE_DIRS})
 include_directories(${OpenCV_INCLUDE_DIRS})
 include_directories(${CUDA_INCLUDE_DIRS})
 include_directories(${PYTHON_INCLUDE_DIRS})
+
+include_directories(${NUMPY_INCLUDE_DIR})
+
 
 feature_summary(WHAT ALL)
 
